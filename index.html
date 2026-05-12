@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Retro Courier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-cyan: #00ffff;
+            --bg-dark: #0d0d0d;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-family: 'VT323', monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .crt-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .container {
+            position: relative;
+            z-index: 5;
+            border: 4px solid var(--neon-cyan);
+            padding: 3rem;
+            background: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 20px var(--neon-cyan), inset 0 0 10px var(--neon-cyan);
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.2rem;
+            color: var(--neon-pink);
+            text-shadow: 3px 3px 0px #500050;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        p {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: 2px solid var(--neon-pink);
+            color: var(--neon-pink);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .contact-btn:hover {
+            background: var(--neon-pink);
+            color: #000;
+            box-shadow: 0 0 15px var(--neon-pink);
+        }
+
+        .footer {
+            margin-top: 2.5rem;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            color: var(--neon-cyan);
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: var(--neon-cyan);
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    <div class="container">
+        <h1>RETRO COURIER<br>PIXEL DELIVERY</h1>
+        <p>> STATUS: ACTIVE</p>
+        <p>> NEED ASSISTANCE?<span class="cursor"></span></p>
+        <a href="mailto:emirhantunc7805@gmail.com" class="contact-btn">Dispatch Support</a>
+        <div class="footer">
+            SIGNAL ESTABLISHED BY EMIRHAN TUNC
+        </div>
+    </div>
+</body>
+</html>
