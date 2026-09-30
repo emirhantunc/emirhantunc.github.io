@@ -12,3 +12,13 @@ a { color: var(--gold); }
 .muted { color: var(--muted); }
 footer { margin-top:48px; font-size:.9rem; color:var(--muted); }
 nav a { margin-right: 16px; }
+
+.doc { max-width: 880px; }
+.doc h2 { margin-top: 2em; border-bottom: 1px solid rgba(255,227,156,.25); padding-bottom: .3em; }
+.doc h3 { color: var(--cream); margin-top: 1.5em; }
+.table { overflow-x: auto; margin: 1em 0; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { border: 1px solid rgba(159,176,196,.35); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: rgba(255,227,156,.12); color: var(--gold); }
+code { background: rgba(255,255,255,.08); padding: 1px 5px; border-radius: 4px; font-size: .88em; }
+hr { border: 0; border-top: 1px solid rgba(159,176,196,.3); margin: 2.5em 0; }
