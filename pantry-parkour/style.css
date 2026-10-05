@@ -1,0 +1,23 @@
+/* Pantry Parkour - printed-zine style: paper, spot inks, chunky poster type */
+:root { --paper: #f4eee0; --ink: #2b2733; --pink: #ff48b0; --teal: #00838a; --yellow: #ffe01a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px 60px; }
+nav { display: flex; gap: 18px; margin-bottom: 28px; font-weight: 600; }
+nav a { color: var(--ink); text-decoration: none; border-bottom: 3px solid var(--pink); }
+h1, h2 { font-family: "Bowlby One", Impact, sans-serif; font-weight: 400; line-height: 1.1; letter-spacing: .01em; }
+h1 { font-size: clamp(40px, 9vw, 76px); margin: 8px 0 12px; text-shadow: -4px -3px 0 var(--pink); }
+h2 { font-size: 28px; margin-top: 36px; text-shadow: -2px -2px 0 var(--yellow); }
+a { color: var(--teal); }
+.hero { display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: center; }
+.hero img { width: 120px; height: 120px; border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); }
+.tag { font-size: 19px; margin: 0; }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin: 28px 0; }
+.shots img, .feature { width: 100%; border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); display: block; }
+.feature { margin: 24px 0; }
+.badge { display: inline-block; background: var(--yellow); border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink);
+  padding: 8px 16px; font-weight: 600; margin: 6px 10px 6px 0; color: var(--ink); text-decoration: none; }
+.doc h2 { font-size: 22px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+td, th { border: 2px solid var(--ink); padding: 6px 8px; vertical-align: top; text-align: left; }
+footer { margin-top: 48px; font-size: 14px; border-top: 3px dotted var(--ink); padding-top: 12px; }
