@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Porto Lume";
+  src: url("fonts/PortoLume.ttf") format("truetype");
+  font-display: swap;
+}
+:root {
+  --ink: #2b1d1a;
+  --plum: #4a2f3a;
+  --brick: #7a3324;
+  --terra: #a8452e;
+  --ochre: #d19a3a;
+  --cream: #f4e6c4;
+  --plaster: #e3cfa2;
+  --sand: #c2a77c;
+  --dust: #8f7658;
+  --pine: #1f4a3e;
+  --tram: #2f6b4f;
+  --deep: #173c4a;
+  --white: #fbf5e6;
+}
+* { box-sizing: border-box; }
+html { background: var(--cream); }
+body {
+  margin: 0;
+  color: var(--ink);
+  font: 400 18px/1.65 "Lora", Georgia, serif;
+  background: var(--cream);
+}
+main { max-width: 900px; margin: 0 auto; padding: 20px 16px 56px; }
+img { max-width: 100%; }
+
+nav {
+  display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center;
+  border-bottom: 3px solid var(--ink); padding-bottom: 12px; margin-bottom: 36px;
+  font: 16px "Porto Lume", monospace; text-transform: uppercase; letter-spacing: .04em;
+}
+nav .brand { color: var(--terra); margin-right: auto; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+nav .brand img { width: 32px; height: 32px; border: 2px solid var(--ink); border-radius: 7px; image-rendering: pixelated; }
+nav a { color: var(--ink); text-decoration: none; }
+nav a:hover, nav a[aria-current] { color: var(--terra); }
+
+a { color: var(--terra); text-underline-offset: 3px; }
+h1, h2, h3 { font-family: "Porto Lume", monospace; font-weight: 400; letter-spacing: .03em; line-height: 1.25; }
+h1 { font-size: clamp(34px, 8vw, 60px); color: var(--brick); margin: 0 0 6px; text-shadow: 3px 3px 0 var(--plaster); }
+h2 { font-size: clamp(22px, 4.5vw, 28px); margin: 48px 0 10px; color: var(--ink); }
+h3 { font-size: 19px; margin: 28px 0 6px; color: var(--brick); }
+
+.shot {
+  display: block; width: 100%; height: auto; image-rendering: pixelated;
+  border: 3px solid var(--ink); border-radius: 6px; box-shadow: 6px 6px 0 var(--sand); background: var(--ink);
+}
+.hero .shot { margin: 18px 0 22px; }
+.tag { font-size: 20px; margin: 0 0 4px; color: var(--plum); font-style: italic; }
+.stores { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+.btn {
+  display: inline-block; padding: 12px 20px; border: 3px solid var(--ink); border-radius: 6px;
+  background: var(--tram); color: var(--white); box-shadow: 4px 4px 0 var(--ink);
+  font: 16px "Porto Lume", monospace; text-transform: uppercase; letter-spacing: .04em; text-decoration: none;
+}
+.btn.alt { background: var(--terra); }
+.btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+
+.feature { display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; align-items: center; margin: 40px 0; }
+.feature:nth-of-type(even) .shot { order: 2; }
+.feature h2 { margin-top: 0; }
+.feature p { margin: 0; }
+
+.receipt {
+  background: var(--white); border: 2px solid var(--ink); padding: 22px 24px; margin: 48px auto 0; max-width: 460px;
+  font: 18px "Porto Lume", monospace; box-shadow: 6px 6px 0 var(--sand);
+}
+.receipt h3 { text-align: center; margin: 0 0 4px; color: var(--ink); }
+.receipt .sub { text-align: center; color: var(--dust); margin-bottom: 12px; }
+.receipt ul { list-style: none; margin: 0; padding: 12px 0; border-top: 2px dashed var(--sand); border-bottom: 2px dashed var(--sand); }
+.receipt li { display: flex; justify-content: space-between; gap: 12px; }
+.receipt .total { display: flex; justify-content: space-between; margin-top: 10px; }
+
+.doc p, .doc li { max-width: 72ch; }
+.doc .lead { font-size: 19px; }
+.box { background: var(--white); border: 2px solid var(--ink); border-radius: 6px; padding: 14px 18px; margin: 18px 0; }
+.table { overflow-x: auto; margin: 12px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 16px; background: var(--white); border: 2px solid var(--ink); }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--sand); }
+th { background: var(--plaster); font-weight: 600; }
+details { border-bottom: 2px dashed var(--sand); padding: 12px 0; }
+summary { cursor: pointer; font-weight: 600; }
+details p { margin: 8px 0 0; }
+
+footer {
+  margin-top: 64px; padding-top: 14px; border-top: 3px solid var(--ink);
+  font-size: 15px; color: var(--plum); display: flex; flex-wrap: wrap; gap: 6px 18px;
+}
+footer a { color: var(--plum); }
+
+@media (max-width: 680px) {
+  body { font-size: 17px; }
+  .feature { grid-template-columns: 1fr; gap: 14px; }
+  .feature:nth-of-type(even) .shot { order: 0; }
+}
